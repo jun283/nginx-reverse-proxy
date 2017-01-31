@@ -4,11 +4,14 @@
 
 . colors.sh
 
+declare SCRIPT_PATH=$PWD/
+
 declare -A ROOT=$(eval echo ~${SUDO_USER})/
 declare NGINX_PATH="/toffs/nginx/"
 declare owasp_modsecurity_crs_PATH="${NGINX_PATH}conf/owasp-modsecurity-crs/"
 declare -A DOWNLOAD="${SCRIPT_PATH}download/"
 declare -A BUILD="${ROOT}nginx-build/" 
+declare -A BUILD_SRC="${ROOT}nginx-build/Source/" 
 
 #create nginx user
 groupadd nginx
@@ -20,7 +23,7 @@ useradd -M -s /sbin/nologin -g nginx nginx
 
 /sbin/ldconfig
 
-cd ${BUILD}nginx-1.10.2	
+cd ${BUILD_SRC}nginx-1.10.2	
 
 ./configure \
 --user=nginx \
@@ -28,12 +31,11 @@ cd ${BUILD}nginx-1.10.2
 --prefix=${NGINX_PATH} \
 --http-proxy-temp-path=${NGINX_PATH}proxy_temp \
 --http-client-body-temp-path=${NGINX_PATH}client_body_temp \
---with-pcre=${BUILD}pcre-8.39 \
---with-zlib=${BUILD}zlib-1.2.11 \
+--with-pcre=${BUILD_SRC}pcre-8.39 \
+--with-zlib=${BUILD_SRC}zlib-1.2.11 \
 --with-http_ssl_module \
---with-openssl=${BUILD}openssl-1.0.2j \
+--with-openssl=${BUILD_SRC}openssl-1.0.2j \
 --with-stream \
---with-mail=dynamic \
 --with-poll_module \
 --with-http_auth_request_module \
 --with-http_image_filter_module \
@@ -53,11 +55,11 @@ cd ${BUILD}nginx-1.10.2
 --with-http_stub_status_module \
 --with-http_degradation_module \
 --with-http_v2_module \
---with-http_perl_module
---add-module=${BUILD}modsecurity-2.9.1/nginx/modsecurity/ \
---add-module=${BUILD}testcookie-nginx-module-master 
+--add-module=${BUILD_SRC}modsecurity-2.9.1/nginx/modsecurity/ \
+--add-module=${BUILD_SRC}testcookie-nginx-module-master 
 
-
+#--with-mail=dynamic \
+#--with-http_perl_module \
 #--pid-path=${NGINX_PATH}sbin/nginx.pid \
 #--error-log-path=$DEFV_SoftProgram_PATH"nginx/logs/error.log" 
 #--http-log-path=$DEFV_SoftProgram_PATH"nginx/logs/access.log" 
@@ -77,6 +79,19 @@ cd ${BUILD}nginx-1.10.2
 
 make
 make install
+
+#create serve
+#cp nginx.service /lib/systemd/system
+
+#start nginx
+#systemctl start nginx.service
+#start ngiinx when OS start
+#systemctl enable nginx.service
+#check state
+#systemctl status nginx.service
+#systemctl stop nginx
+
+
 
 
 
