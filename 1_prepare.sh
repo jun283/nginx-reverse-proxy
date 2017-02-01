@@ -19,3 +19,21 @@ declare -A BUILD_SRC="${ROOT}nginx-build/Source/"
 [ -d "$DOWNLOAD" ] || mkdir -p $DOWNLOAD
 [ -d "$BUILD" ] || mkdir -p $BUILD
 [ -d "$owasp_modsecurity_crs_PATH" ] || mkdir -p $owasp_modsecurity_crs_PATH
+
+
+
+##check pcre
+rpm    -qa   pcre
+pcregrep -V
+
+pcretest -C
+pcre-config --version
+
+##uninstall 
+rpm -e --nodeps pcre
+
+cd <>
+./configure --prefix=/usr/local/pcre
+
+make
+make install
