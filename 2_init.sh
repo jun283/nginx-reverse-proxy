@@ -20,7 +20,6 @@ chown -R root.root ./
 
 /sbin/ldconfig
 
-
 show_blue_bg "build" "pcre-8.39"
 cd ${BUILD_SRC}pcre-8.39
 ./configure --prefix=${BUILD}pcre  --enable-utf8  --enable-unicode-properties
@@ -58,6 +57,14 @@ cd ${BUILD_SRC}openssl-1.0.2j
 ./config --prefix=${BUILD} shared zlib-dynamic enable-camellia     # from colby
 make
 sudo make install
+
+show_blue_bg "build" "GeoIP"
+cd ${BUILD_SRC}GeoIP-1.4.8
+./configure
+make
+sudo make install
+libtool --finish /usr/local/lib
+/sbin/ldconfig -n /usr/local/lib
 
 show_blue_bg "build" "modsecurity-2.9.1"
 #  --with-apxs=FILE        FILE is the path to apxs; defaults to "apxs".
