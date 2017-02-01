@@ -24,12 +24,17 @@ rm -rf ${DOWNLOAD}/*
 #local WORKDIR="${CACHE}"
 cd ${DOWNLOAD}
 
+show_blue_bg "Download" "GeoIP.tar.gz"
+wget -q --no-check-certificate http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
+tar  -zxf GeoIP.tar.gz -C $BUILD_SRC
+
+
 show_blue_bg "Download" "apr-1.5.2.tar.gz"
-wget -q --no-check-certificate http://download.openpkg.org/components/cache/apr/apr-1.5.2.tar.gz
+wget -q --no-check-certificate http://www-us.apache.org/dist//apr/apr-1.5.2.tar.gz
 tar  -zxf apr-1.5.2.tar.gz -C $BUILD_SRC
 
 show_blue_bg "Download" "apr-util-1.5.4.tar.gz"
-wget -q --no-check-certificate http://download.openpkg.org/components/cache/apr/apr-util-1.5.4.tar.gz
+wget -q --no-check-certificate http://www-us.apache.org/dist//apr/apr-util-1.5.4.tar.gz #http://download.openpkg.org/components/cache/apr/apr-util-1.5.4.tar.gz
 tar  -zxf apr-util-1.5.4.tar.gz -C $BUILD_SRC
 
 
@@ -78,5 +83,5 @@ tar  -xzf modsecurity-2.9.1.tar.gz -C $BUILD_SRC
 #change chmod 755
 #find $BUILD_SRC -type d -exec chmod 755 {} \;
 cd $BUILD_SRC
-chmod 755 ./
+chmod 755 ./ -R
 chown -R root.root ./
