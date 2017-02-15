@@ -55,6 +55,8 @@ cd ${BUILD_SRC}nginx-1.10.2
 --with-http_stub_status_module \
 --with-http_degradation_module \
 --with-http_v2_module \
+--with-http_geoip_module \
+--add-module=${BUILD_SRC}ngx_cache_purge-2.3 \
 --add-module=${BUILD_SRC}modsecurity-2.9.1/nginx/modsecurity/ \
 --add-module=${BUILD_SRC}testcookie-nginx-module-master 
 

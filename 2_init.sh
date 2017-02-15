@@ -80,6 +80,7 @@ chmod u+x *.sh
 ./autogen.sh
 #./configure --enable-standalone-module --disable-mlogc --prefix=${BUILD}pcre-8.39 --libdir=/usr/local/lib/pcre --includedir=/usr/local/include/pcre
 #./configure --prefix=${BUILD}modsecurity --enable-standalone-module --disable-mlogc  --disable-apache2-module --with-pcre=${BUILD}pcre --with-apr=${BUILD}apr --with-apu=${BUILD}apr-util --with-apxs=no
-./configure --prefix=${BUILD}modsecurity --enable-standalone-module --disable-mlogc  --disable-apache2-module --with-pcre=${BUILD}pcre --with-apr=${BUILD}apr --with-apu=${BUILD}apr-util --with-apxs=no
+#./configure --prefix=${BUILD}modsecurity --enable-standalone-module --disable-mlogc  --disable-apache2-module --with-pcre=${BUILD}pcre --with-apr=${BUILD}apr --with-apu=${BUILD}apr-util --with-apxs=no
+./configure --enable-standalone-module --disable-mlogc  
 sudo make
 
