@@ -74,7 +74,7 @@ systemctl enable nginx.service
 #check state
 systemctl status nginx.service
 
-
+/toffs/nginx/sbin/nginx -V
 
 
 
