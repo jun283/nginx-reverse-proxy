@@ -1,5 +1,7 @@
 # nginx-reverse-proxy installer
-A nginx install shell for reverse-proxy base on Centos7 + Nginx 1.10.2
+A nginx install shell for reverse-proxy base on Centos7 + Nginx 1.10.2 with many third party modules:
+geoip,openssl,ngx_cache_purge-2.3,modsecurity-2.9.1,kyprizel-testcookie-nginx-module,etc.
+
 
 1.) prepare:
 
@@ -14,4 +16,10 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/jun283/nginx-
 </pre>
 
 
-![alt tag] (nginx-reverse-proxy/source/Snip20170315_12.png)
+3.) Welcome to nginx!
+
+<pre>
+/toffs/nginx/sbin/nginx -V
+</pre>
+
+![alt tag](https://cloud.githubusercontent.com/assets/5975212/23941029/26a65f8a-09a2-11e7-822b-ad3529c621cc.png)
