@@ -11,6 +11,5 @@ sh prepare.sh
 2.) install:
 
 <pre>
-wget https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/install.sh
-sh install.sh
+wget --no-check-certificate -O  https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/install.sh | sh
 </pre>
