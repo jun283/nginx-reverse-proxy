@@ -18,13 +18,16 @@ declare -A BUILD_SRC="${ROOT}nginx-build/Source/"
 [ -d "$BUILD_SRC" ] || mkdir -p $BUILD_SRC
 [ -d "$owasp_modsecurity_crs_PATH" ] || mkdir -p $owasp_modsecurity_crs_PATH
 
+show_blue_bg "GIT" "git clone https://github.com/SpiderLabs/owasp-modsecurity-crs"
+cd ${NGINX_PATH}conf
+git clone https://github.com/SpiderLabs/owasp-modsecurity-crs
+
 #local WORKDIR="${CACHE}"
 cd ${DOWNLOAD}
 
 show_blue_bg "Download" "GeoIP.tar.gz"
 #wget -q --no-check-certificate http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
 tar  -zxf GeoIP.tar.gz -C $BUILD_SRC
-
 
 show_blue_bg "Download" "apr-1.5.2.tar.gz"
 #wget -q --no-check-certificate http://www-us.apache.org/dist//apr/apr-1.5.2.tar.gz
@@ -47,10 +50,6 @@ tar  -zxf ngx_cache_purge-2.3.tar.gz -C $BUILD_SRC
 show_blue_bg "Download" "testcookie"
 #wget -q --no-check-certificate  https://github.com/kyprizel/testcookie-nginx-module/tarball/master -O testcookie-v1.2.tar.gz
 tar  -zxf testcookie-v1.2.tar.gz -C $BUILD_SRC
-
-show_blue_bg "GIT" "git clone https://github.com/SpiderLabs/owasp-modsecurity-crs"
-cd ${NGINX_PATH}conf
-git clone https://github.com/SpiderLabs/owasp-modsecurity-crs
 
 show_blue_bg "Download" "nginx-1.10.2.tar.gz"
 #wget -q --no-check-certificate http://nginx.org/download/nginx-1.10.2.tar.gz  #--no-same-owner 
