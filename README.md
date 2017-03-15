@@ -12,3 +12,6 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/jun283/nginx-
 <pre>
 wget --no-check-certificate -O - https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/install.sh | sh
 </pre>
+
+
+![alt tag] (nginx-reverse-proxy/source/Snip20170315_12.png)
