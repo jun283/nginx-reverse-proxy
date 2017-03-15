@@ -18,8 +18,6 @@ declare -A BUILD_SRC="${ROOT}nginx-build/Source/"
 [ -d "$BUILD_SRC" ] || mkdir -p $BUILD_SRC
 [ -d "$owasp_modsecurity_crs_PATH" ] || mkdir -p $owasp_modsecurity_crs_PATH
 
-rm -rf ${DOWNLOAD}/*
-
 #local WORKDIR="${CACHE}"
 cd ${DOWNLOAD}
 
