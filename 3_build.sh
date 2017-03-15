@@ -76,9 +76,6 @@ systemctl status nginx.service
 
 /toffs/nginx/sbin/nginx -V
 
-#stop firewalld
-systemctl stop firewalld.service
-#disable auto start
-systemctl disable firewalld.service 
+
 
 
