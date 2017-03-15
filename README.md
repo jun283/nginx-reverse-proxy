@@ -14,4 +14,4 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/jun283/nginx-
 </pre>
 
 
-![alt tag] (nginx-reverse-proxy/source/Snip20170315_12.png)
+![alt tag](https://cloud.githubusercontent.com/assets/5975212/23941029/26a65f8a-09a2-11e7-822b-ad3529c621cc.png)
