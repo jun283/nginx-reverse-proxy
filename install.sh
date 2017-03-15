@@ -6,7 +6,7 @@ sudo git clone https://github.com/jun283/nginx-reverse-proxy.git
 cd nginx-reverse-proxy
 sudo chmod u+x *.sh 
 
-./download.sh
+./1_download.sh
 ./2_init.sh
 ./3_build.sh
 
