@@ -8,13 +8,9 @@ yum -y install epel-release   # Install EPEL repo
 yum -y update && systemctl reboot   # Run all updates before starting, and apply new SELinux settings
 </pre>
 
-2.) prerequisites:
+2.) install:
 
 <pre>
-yum install gc gcc gcc-c++ pcre-devel zlib-devel make wget openssl-devel libxml2-devel libxslt-devel gd-devel perl-ExtUtils-Embed GeoIP-devel gperftools gperftools-devel libatomic_ops-devel perl-ExtUtils-Embed wget git unzip
-</pre>
-
-<pre>
-useradd nginx
-usermod -s /sbin/nologin nginx
+wget https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/install.sh
+sh install.sh
 </pre>
