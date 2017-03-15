@@ -54,12 +54,7 @@ git clone https://github.com/SpiderLabs/owasp-modsecurity-crs
 
 show_blue_bg "Download" "nginx-1.10.2.tar.gz"
 #wget -q --no-check-certificate http://nginx.org/download/nginx-1.10.2.tar.gz  #--no-same-owner 
-if [ -s "nginx-1.10.2.tar.gz" ] ; then
-	run_ok
-    tar  -zxf nginx-1.10.2.tar.gz -C $BUILD_SRC
-else 
-    run_error "Could not fetch http://nginx.org/download/nginx-1.10.2.tar.gz"
-fi
+tar  -zxf nginx-1.10.2.tar.gz -C $BUILD_SRC
 
 show_blue_bg "Download" "pcre-8.39"
 #wget  --no-check-certificate ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
