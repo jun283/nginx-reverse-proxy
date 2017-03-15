@@ -47,8 +47,6 @@ show_blue_bg "Download" "ngx_cache_purge-2.3"
 tar  -zxf ngx_cache_purge-2.3.tar.gz -C $BUILD_SRC
 
 show_blue_bg "Download" "testcookie"
-#wget -q --no-check-certificate https://github.com/kyprizel/testcookie-nginx-module/archive/master.zip -O testcookie.zip
-#unzip -q -o "testcookie.zip" -d $BUILD_SRC
 #wget -q --no-check-certificate  https://github.com/kyprizel/testcookie-nginx-module/tarball/master -O testcookie-v1.2.tar.gz
 tar  -zxf testcookie-v1.2.tar.gz -C $BUILD_SRC
 
