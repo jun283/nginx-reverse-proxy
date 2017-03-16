@@ -13,8 +13,10 @@ sudo sh ./prepare.sh
 2.) install:
 
 <pre>
-wget --no-check-certificate  https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/install.sh 
-sudo sh ./install.sh
+sudo git clone https://github.com/jun283/nginx-reverse-proxy.git
+cd nginx-reverse-proxy
+sudo chmod u+x *.sh 
+./install.sh
 </pre>
 
 
