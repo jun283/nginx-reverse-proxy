@@ -4,6 +4,7 @@
 
 chmod u+x *.sh 
 
+declare SCRIPT_PATH=$PWD/
 declare -A ROOT=$(eval echo ~${SUDO_USER})/
 declare NGINX_PATH="/toffs/nginx/"
 declare owasp_modsecurity_crs_PATH="${NGINX_PATH}conf/owasp-modsecurity-crs/"
