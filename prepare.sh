@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #stop firewall
-sed -i /etc/selinux/config -r -e 's/^SELINUX=.*/SELINUX=disabled/g' 
-systemctl stop firewalld.service 
-systemctl disable firewalld.service 
+sudo systemctl stop firewalld.service
+sudo systemctl disable firewalld.service
+sudo sed -i /etc/selinux/config -r -e 's/^SELINUX=.*/SELINUX=disabled/g' 
 
 /bin/yum -y install epel-release   
 /bin/yum -y install  gcc gcc-c++ cmake  pcre pcre-devel  zlib zlib-devel  openssl openssl-devel  
