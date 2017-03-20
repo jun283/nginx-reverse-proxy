@@ -16,7 +16,7 @@ sudo sh ./prepare.sh
 sudo git clone https://github.com/jun283/nginx-reverse-proxy.git
 cd nginx-reverse-proxy
 sudo chmod u+x *.sh 
-./install.sh
+sudo ./install.sh
 </pre>
 
 
