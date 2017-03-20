@@ -65,6 +65,7 @@ make
 make install
 
 #create serve
+cd ${SCRIPT_PATH}
 cp nginx.service /lib/systemd/system
 
 #start nginx
