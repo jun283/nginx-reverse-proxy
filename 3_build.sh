@@ -64,6 +64,12 @@ cd ${BUILD_SRC}nginx-1.10.2
 make
 make install
 
+mkdir -p /toffs/nginx/logs
+chmod 777 /toffs/nginx/logs -R
+
+mkdir -p /toffs/nginx/proxy_cache
+chmod 777 /toffs/nginx/proxy_cache -R
+
 #create serve
 cd ${SCRIPT_PATH}
 cp nginx.service /lib/systemd/system
