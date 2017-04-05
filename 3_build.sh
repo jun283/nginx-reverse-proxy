@@ -58,7 +58,8 @@ cd ${BUILD_SRC}nginx-1.10.2
 --with-http_geoip_module \
 --add-module=${BUILD_SRC}ngx_cache_purge-2.3 \
 --add-module=${BUILD_SRC}modsecurity-2.9.1/nginx/modsecurity/ \
---add-module=${BUILD_SRC}kyprizel-testcookie-nginx-module-b20b5fd
+--add-module=${BUILD_SRC}kyprizel-testcookie-nginx-module-b20b5fd \
+--add-module=/path/to/nginx_tcp_proxy_module --with-http_ssl_module
 
 
 make
