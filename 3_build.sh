@@ -28,7 +28,7 @@ cd ${BUILD_SRC}nginx-1.10.2
 ./configure \
 --user=nginx \
 --group=nginx \
---prefix=${NGINX_PATH} \
+--prefix=/toffs/nginx \
 --http-proxy-temp-path=${NGINX_PATH}proxy_temp \
 --http-client-body-temp-path=${NGINX_PATH}client_body_temp \
 --with-pcre=${BUILD_SRC}pcre-8.39 \
