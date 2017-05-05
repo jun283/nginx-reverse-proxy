@@ -14,3 +14,6 @@ systemctl disable firewalld.service
 ./1_download.sh
 ./2_init.sh
 ./3_build.sh
+
+#set timezone to UTC
+cp /usr/share/zoneinfo/UTC /etc/localtime
