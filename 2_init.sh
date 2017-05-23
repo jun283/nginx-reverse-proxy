@@ -84,3 +84,6 @@ chmod u+x *.sh
 ./configure --enable-standalone-module --disable-mlogc  
 sudo make
 
+show_blue_bg "git" "nginx-module-vts"
+cd ${BUILD_SRC}
+git clone git://github.com/vozlt/nginx-module-vts.git
