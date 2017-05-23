@@ -2,7 +2,7 @@
 #https://github.com/gp187/nginx-builder
 #https://github.com/agile6v/awesome-nginx
 
-. colors.sh
+./colors.sh
 
 declare SCRIPT_PATH=$PWD/
 
