@@ -23,8 +23,13 @@ show_blue_bg "GIT" "git clone https://github.com/SpiderLabs/owasp-modsecurity-cr
 cd ${NGINX_PATH}conf
 git clone https://github.com/SpiderLabs/owasp-modsecurity-crs
 
+
 #local WORKDIR="${CACHE}"
 cd ${DOWNLOAD}
+
+#Clone Nginx RTMP module source code from Github:
+show_blue_bg "Download" "RTMP module"
+git clone https://github.com/arut/nginx-rtmp-module
 
 show_blue_bg "Download" "GeoIP.tar.gz"
 #wget -q --no-check-certificate http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
