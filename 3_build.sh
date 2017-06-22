@@ -57,6 +57,7 @@ cd ${BUILD_SRC}nginx-1.10.2
 --with-http_v2_module \
 --with-http_geoip_module \
 --with-http_auth_request_module \
+--with-http_secure_link_module \
 --add-module=${BUILD_SRC}ngx_cache_purge-2.3 \
 --add-module=${BUILD_SRC}modsecurity-2.9.1/nginx/modsecurity/ \
 --add-module=${BUILD_SRC}kyprizel-testcookie-nginx-module-b20b5fd \
