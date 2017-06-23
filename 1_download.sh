@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. colors.sh
+.colors.sh
 
 chmod u+x *.sh 
 
