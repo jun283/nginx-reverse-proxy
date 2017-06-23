@@ -6,7 +6,8 @@ geoip,openssl,ngx_cache_purge-2.3,modsecurity-2.9.1,kyprizel-testcookie-nginx-mo
 1.) prepare:
 
 <pre>
-wget --no-check-certificate https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/prepare.sh 
+sudo yum -y install wget git
+sudo wget --no-check-certificate https://raw.githubusercontent.com/jun283/nginx-reverse-proxy/master/prepare.sh 
 sudo sh ./prepare.sh 
 </pre>
 
