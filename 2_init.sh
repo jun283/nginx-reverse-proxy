@@ -3,7 +3,7 @@
 #/usr/bin/yum -y install yum-utils cmake patch make gcc gcc-c++  flex bison file libtool libtool-libs autoconf kernel-devel libjpeg libjpeg-devel libpng libpng-devel libpng10 libpng10-devel gd gd-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glib2 glib2-devel bzip2 bzip2-devel libevent libevent-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel libidn libidn-devel openssl openssl-devel vim-minimal nano fonts-chinese gettext gettext-devel ncurses-devel gmp-devel pspell-devel unzip libjpeg-devel libpng-devel curl-devel mail wget curl git sysstat net-snmp net-snmp-utils libxslt mtr iotop  'pcre*' 'libpcap*' 'bind-utils' 'dnsutils' 'libedit*' 'net-snmp-*' 'libtidy*' 'libxml*' 'libpng*' 'libxsl*' 'openssl-*'  'icu*' 'libicu*' 'libcurl*' 'libtidy*'  'tracer*' bc ntp httpd-devel apr apr-util-devel apr-devel
 
 
-. colors.sh
+source ./colors.sh
 
 declare SCRIPT_PATH=$PWD/
 
