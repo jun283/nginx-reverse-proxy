@@ -23,7 +23,7 @@ useradd -M -s /sbin/nologin -g nginx nginx
 
 /sbin/ldconfig
 
-cd ${BUILD_SRC}nginx-1.10.2	
+cd ${BUILD_SRC}nginx-1.12.0	
 
 ./configure \
 --user=nginx \
