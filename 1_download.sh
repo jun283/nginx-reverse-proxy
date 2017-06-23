@@ -59,7 +59,7 @@ tar  -zxf testcookie-v1.2.tar.gz -C $BUILD_SRC
 
 show_blue_bg "Download" "nginx-1.10.2.tar.gz"
 #wget -q --no-check-certificate http://nginx.org/download/nginx-1.10.2.tar.gz  #--no-same-owner 
-tar  -zxf nginx-1.10.2.tar.gz -C $BUILD_SRC
+tar  -zxf nginx-1.12.0.tar.gz -C $BUILD_SRC
 
 show_blue_bg "Download" "pcre-8.39"
 #wget  --no-check-certificate ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
