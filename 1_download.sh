@@ -57,7 +57,7 @@ show_blue_bg "Download" "testcookie"
 #wget -q --no-check-certificate  https://github.com/kyprizel/testcookie-nginx-module/tarball/master -O testcookie-v1.2.tar.gz
 tar  -zxf testcookie-v1.2.tar.gz -C $BUILD_SRC
 
-show_blue_bg "Download" "nginx-1.10.2.tar.gz"
+show_blue_bg "Download" "nginx-1.12.0.tar.gz"
 #wget -q --no-check-certificate http://nginx.org/download/nginx-1.10.2.tar.gz  #--no-same-owner 
 tar  -zxf nginx-1.12.0.tar.gz -C $BUILD_SRC
 
